@@ -21,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding.Plats.setOnClickListener {
             //Log.d("MainActivity", "Vous avez cliqué sur le bouton plat")
-            Toast.makeText(this, "vous avez cliqué sur le bouton plat", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "vous avez cliqué sur le bouton plat !", Toast.LENGTH_LONG).show()
             val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category", getString(R.string.btn_Plats))
             startActivity(intent)
