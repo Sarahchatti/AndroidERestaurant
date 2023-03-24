@@ -8,4 +8,34 @@
     <string name="text_bienvenue">Bienvenue chez</string>
     <string name="Nom_Restau">Nom restau</string>
     <string name="nom_restau">Nom Resatu</string>
+
+    <string-array name="Entrees">
+        <item>Entree 1</item>
+        <item>Entree 1</item>
+        <item>Entree 1</item>
+        <item>Entree 1</item>
+        <item>Entree 1</item>
+        <item>Entree 1</item>
+        <item>Entree 1</item>
+    </string-array>
+
+    <string-array name="Plats">
+        <item>Plats 1</item>
+        <item>Plats 1</item>
+        <item>Plats 1</item>
+        <item>Plats 1</item>
+        <item>Plats 1</item>
+        <item>Plats 1</item>
+        <item>Plats 1</item>
+    </string-array>
+
+    <string-array name="Desserts">
+        <item>Desserts 1</item>
+        <item>Desserts 1</item>
+        <item>Desserts 1</item>
+        <item>Desserts 1</item>
+        <item>Desserts 1</item>
+        <item>Desserts 1</item>
+        <item>Desserts 1</item>
+    </string-array>
 </resources>
