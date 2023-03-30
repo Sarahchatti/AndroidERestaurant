@@ -6,66 +6,40 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.Window
 import android.widget.Button
 import android.widget.Toast
 import fr.isen.chatti.androiderestaurant.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
 
-    //private lateinit var binding: ActivityHomeBinding
+    private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val entreesButton = findViewById<Button>(R.id.entrees)
-        entreesButton.setOnClickListener{
+        binding.entrees.setOnClickListener {
             val intent = Intent(this, CategoryActivity::class.java)
-            intent.putExtra("CATEGORY_NAME","Entrees")
+            intent.putExtra("category", binding.entrees.text)
             startActivity(intent)
         }
 
-        val platsButton = findViewById<Button>(R.id.Plats)
-        platsButton.setOnClickListener{
+        binding.Plats.setOnClickListener {
             val intent = Intent(this, CategoryActivity::class.java)
-            intent.putExtra("CATEGORY_NAME","Plats")
+            intent.putExtra("category", "plats")
             startActivity(intent)
         }
 
-        val dessertButton = findViewById<Button>(R.id.Dessert)
-        dessertButton.setOnClickListener{
+        binding.Dessert.setOnClickListener {
             val intent = Intent(this, CategoryActivity::class.java)
-            intent.putExtra("CATEGORY_NAME","Dessert")
+            intent.putExtra("category", "desserts")
             startActivity(intent)
         }
-
-       fun openCategoryActivity(category:String) {
-           val intent = Intent(this, CategoryActivity::class.java)
-           intent.putExtra("category", category)
-           startActivity(intent)
-       }
-
-        fun onDestroy(){
-            super.onDestroy()
-            Log.d("MyActivity", "Home Activity destroyed")
-        }
-       /* binding.Plats.setOnClickListener {
-            //Log.d("MainActivity", "Vous avez cliqué sur le bouton plat")
-            Toast.makeText(this, "vous avez cliqué sur le bouton plat !", Toast.LENGTH_LONG).show()
-            val intent = Intent(this, CategoryActivity::class.java)
-            intent.putExtra("category", getString(R.string.btn_Plats))
-            startActivity(intent)
-
-        }
-*/
-
-
-        }
-
     }
-
+}
 
 
 

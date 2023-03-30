@@ -14,7 +14,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Titreliste" />
+        app:layout_constraintTop_toBottomOf="@id/Titreliste"
+        tools:itemCount="5" />
 
     <TextView
         android:id="@+id/Titreliste"
