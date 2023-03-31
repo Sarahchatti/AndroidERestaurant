@@ -12,7 +12,7 @@
         android:id="@+id/Dessert"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/btn_Dessert"
         app:backgroundTint="#064A39"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,8 +46,8 @@
 
     <TextView
         android:id="@+id/Bienvenue"
-        android:layout_width="305dp"
-        android:layout_height="101dp"
+        android:layout_width="299dp"
+        android:layout_height="60dp"
         android:fontFamily="cursive"
         android:text="@string/text_bienvenue"
         android:textColor="#064A39"
@@ -58,16 +58,42 @@
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/nom_restau"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_width="184dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="cursive"
         android:text="@string/nom_restau"
+        android:textColor="#064A39"
+        android:textSize="70sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bienvenue" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="415dp"
+        android:layout_height="563dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.523"
+        app:srcCompat="@drawable/dall_e_2023_03_31_11_24_34___entree_salle_de_restaurant_style_scandinave_vert" />
+
+    <Button
+        android:id="@+id/deco2"
+        android:layout_width="748dp"
+        android:layout_height="26dp"
+        android:text="@string/btndeco"
+        app:backgroundTint="#064A39"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

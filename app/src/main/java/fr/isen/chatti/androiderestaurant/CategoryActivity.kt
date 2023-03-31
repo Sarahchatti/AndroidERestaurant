@@ -30,8 +30,11 @@ class CategoryActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        category.setOnClickListener(){
+            Log.w("CategoryActivity","recyclerviewtouched")
+        }
         recyclerView.adapter = CategoryAdapter(arrayListOf()) {
-            val intent = Intent(this@CategoryActivity, DishDetailsActivity::class.java)
+            val intent = Intent(this, DishDetailsActivity::class.java)
             intent.putExtra("item", it)
             startActivity(intent)
         }
@@ -49,7 +52,7 @@ class CategoryActivity : AppCompatActivity() {
                 handleAPIData(it.toString())
             }, {
                 Log.w("CategoryActivity", "erreur : $it")
-                Toast.makeText(this@CategoryActivity, "Erreur API", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Erreur API", Toast.LENGTH_SHORT).show()
             })
             Volley.newRequestQueue(this).add(jsonRequest)
         }

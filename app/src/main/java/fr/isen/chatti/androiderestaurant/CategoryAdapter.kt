@@ -1,6 +1,7 @@
 package fr.isen.chatti.androiderestaurant
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,20 +10,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class CategoryAdapter(private var itemsList :ArrayList<Items>, val onItemClickListener: (TitleDishes: Items)-> Unit ) : RecyclerView.Adapter<CategoryAdapter.ViewHolder> () {
-    class ViewHolder(ItemView:View):RecyclerView.ViewHolder(ItemView) {
+class CategoryAdapter(private var itemsList :List<Items>, val onItemClickListener: (TitleDishes: Items)-> Unit ) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> () {
+    class CategoryViewHolder(view:View):RecyclerView.ViewHolder(view) {
         val dishName: TextView = itemView.findViewById(R.id.DishNameList)
         val price: TextView = itemView.findViewById(R.id.DishPriceList)
         val images: ImageView = itemView.findViewById(R.id.Imagelist)
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
-        return ViewHolder(view)
+        return CategoryViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val dish = itemsList[position]
         holder.dishName.text = dish.nameFr
 
@@ -39,6 +40,7 @@ class CategoryAdapter(private var itemsList :ArrayList<Items>, val onItemClickLi
     }
 
     override fun getItemCount(): Int {
+        Log.w("category", itemsList.size.toString())
         return itemsList.size
     }
 

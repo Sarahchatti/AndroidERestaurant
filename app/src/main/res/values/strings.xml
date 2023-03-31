@@ -7,11 +7,12 @@
     <string name="btn_entrees">Entrées</string>
     <string name="text_bienvenue">Bienvenue chez</string>
     <string name="Nom_Restau">Nom restau</string>
-    <string name="nom_restau">Nom Resatu</string>
+    <string name="nom_restau">Sarah</string>
     <string name="Couverts">Couverts</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="total">"Total : "</string>
+    <string name="btndeco" />
 
     <string-array name="Entrees">
         <item>Entree 1</item>
